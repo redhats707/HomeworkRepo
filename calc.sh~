@@ -1,20 +1,20 @@
 #!bin/bash
-# For Input
-echo "Enter two numbers : "
+# Take user Input
+echo "Enter Two numbers : "
 read a
 read b
 
-# Choose type of  operation
+# Input type of operation
 echo "Enter Choice :"
 echo "1. Addition"
 echo "2. Subtraction"
 echo "3. Multiplication"
 echo "4. Division"
-read inp
+read ch
 
-# Switch Case
-# calculator options
-case $inp in
+# Switch Case to perform
+# calculator operations
+case $ch in
   1)res=`echo $a + $b | bc`
   ;;
   2)res=`echo $a - $b | bc`
@@ -24,4 +24,4 @@ case $inp in
   4)res=`echo "scale=2; $a / $b" | bc`
   ;;
 esac
-echo "Result is : $res"
+echo "Result : $res"
